@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: rgb(255, 255, 0);
+}
+
+header h1 {
+    color: rgb(102, 37, 37);
+}
+
+.logo {
+    padding: 1rem;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header h1 {
+    padding: 0.625rem;
+}
+
+main {
+    background-image: url("/img/adopt-me.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.form, .resultado {
+    background-color: rgba(59, 21, 21, 0.63);
+    margin-top: 12rem;
+    padding: 2rem;
+    border-radius: 1rem 0;
+    color: white;
+    width: 34.326875rem;
+}
+
+section h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;    
+}
+
+ label {
+    font-size: 1.2rem;
+} 
+
+/* ---------- INPUTS ---------- */
+
+
+input[type='text'], input[type='number'] {
+    height: 2rem;
+    width: 20rem;
+    margin: 0.7rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+  }
+
+input[type='radio']{
+      margin: 0.5rem;
+  }
+
+input[type='button'], input[type='reset'] {
+    width: 9rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0.4rem;
+    border:0;
+    font-weight: bold;
+    margin-top:1rem;
+}
+
+input[type='button'] {
+    background-color: yellow;
+    color: black;
+    margin: 0.95rem;
+}
+
+input[type='reset'] {
+    background-color: red;
+    color: white;
+}
+
+input[type='button']:hover {
+    background-color: rgb(165, 165, 7);
+    transform: scale(1.2);
+} 
+
+input[type='reset']:hover{
+    background-color: rgb(124, 6, 6);
+    transform: scale(1.2);
+}
+
+input:focus {
+    background-color: yellow;
+}
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: purple;
+}
