@@ -3,9 +3,9 @@ let nomeCompleto = document.querySelector('#full-name');
 // selecionar dado do segundo campo
 let quantidade = document.querySelector('#animals-quantity');
 // selecionar dado do terceiro campo
-let generos = document.querySelector('#genre');
+let generos = document.querySelectorAll('#genre');
 //selecionar o quarto campo
-let tipoAnimais = document.querySelector('animal-type');
+let tipoAnimais = document.querySelectorAll('#animal-type');
 //selecionar o campo do link da foto
 let fotoPessoa = document.querySelector('#person');
 // selecionar o primeiro h1
