@@ -30,7 +30,7 @@ header h1 {
 }
 
 main {
-    background-image: url("/img/adopt-me.jpg");
+    background-image: url("./img/adopt-me.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
