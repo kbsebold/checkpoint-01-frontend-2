@@ -1,13 +1,3 @@
-// selecionar dado do primero campo
-let nomeCompleto = document.querySelector('#full-name');
-// selecionar dado do segundo campo
-let quantidade = document.querySelector('#animals-quantity');
-// selecionar dado do terceiro campo
-let generos = document.querySelectorAll('#genre');
-//selecionar o quarto campo
-let tipoAnimais = document.querySelectorAll('#animal-type');
-//selecionar o campo do link da foto
-let fotoPessoa = document.querySelector('#person');
 // selecionar o primeiro h1
 let fraseLogo = document.querySelector('h1');
 // fazer o h1 mudar de cor quando o mouse passar por cima
@@ -24,44 +14,39 @@ botaoEnviar.addEventListener('click', inserirLista);
 
 function inserirLista(event) {
     event.preventDefault();
+    let nomeCompleto = document.querySelector('#full-name');
+    let quantidade = document.querySelector('#animals-quantity');
+    let tipoAnimais =document.querySelectorAll('#animal-type');
+    let tipos = Array.from(tipoAnimais);
+    let tipo = tipos.find((tipo) => tipo.checked);
 
-    let dado = document.createElement('p');
-    dado.innerText = "Nome completo: " + nomeCompleto.value;
-    document.querySelector('.retorno').appendChild(dado);
+    let listaGeneros = document.querySelectorAll('#gender');
+    let generos = Array.from(listaGeneros);
+    let genero = generos.find((genero) => genero.checked);
 
-    let numeroAnimais = document.createElement('p');
-    numeroAnimais.innerText ="Quantidade desejada de animais: " + quantidade.value;
-    document.querySelector('.retorno').appendChild(numeroAnimais);
+    let fotoPessoa = document.querySelector('#person');
 
-    let pet = document.createElement('p');
-    pet.innerText = "Tipo de animal: " + tipoAnimais.value;
-    document.querySelector('.retorno').appendChild(pet);
-
-    for (let i = 0; i > generos.length; i++) {
-        if (generos[i].checked){
-            genero = generos[i].value;
-
-            if (genero == "fem") {
-                genero = "Fêmea";
-            } else if (genero == "male") {
-                genero = "Macho";
-            } else if ( genero == "whatever") {
-                genero = "Tanto Faz";
-            } else {
-                genero = "Não se aplica";
-            }
-            break;
-        }
+    let termos = document.querySelector('#responsabilidade');
+    if (termos.on) {
+        "Parabéns, vc está pronto para adotar pets!"
     }
 
-    let generoAnimal = document.createElement('p');
-    generoAnimal = genero;
-    document.querySelector('.retorno').appendChild(generoAnimal);
+    console.log(termos.on);
+           
+    let elemento = document.createElement("div");
+    elemento.innerHTML = `
+        <p class="dados">Nome completo: ${nomeCompleto.value}</p>
+        <p class="dados">Quantidade de pets: ${quantidade.value}</p>
+        <p class="dados">Tipo de Animal: ${tipo.value}</p>
+        <p class="dados">Gênero do animal:${genero.value}</p>
+        <div class="imagem">
+            <p class="dados">Sua foto:</p>
+            <img class="foto-pessoa" src="${fotoPessoa.value}" alt="" width="50%">
+        </div>
+        <p class="dados"> ${termos} </p>
+    `;
+
+    document.querySelector(".retorno").appendChild(elemento);
+    }
 
 
-    let img = document.createElement('img');
-    img.setAttribute('src', fotoPessoa.value);
-    document.querySelector('.retorno').appendChild(img);
-    img.style.width ='50%';
-
-}
