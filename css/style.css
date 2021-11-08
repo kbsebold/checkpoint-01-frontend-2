@@ -131,12 +131,21 @@ input:focus {
 .dados {
     line-height: 2rem;
     text-align: center;
+    font-size: 1.2rem;
+    color: black;
 }
 
 .imagem {
+    margin: 1.2rem;
     text-align: center;
 }
 
+.fundo {
+    background-color: rgba(255, 255, 255, 0.739);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
 
 
 

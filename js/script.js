@@ -26,14 +26,11 @@ function inserirLista(event) {
 
     let fotoPessoa = document.querySelector('#person');
 
-    let termos = document.querySelector('#responsabilidade');
-    if (termos.on) {
-        "Parabéns, vc está pronto para adotar pets!"
-    }
+    let termos = document.getElementById('responsabilidade');
 
-    console.log(termos.on);
            
     let elemento = document.createElement("div");
+    elemento.setAttribute('class','fundo')
     elemento.innerHTML = `
         <p class="dados">Nome completo: ${nomeCompleto.value}</p>
         <p class="dados">Quantidade de pets: ${quantidade.value}</p>
@@ -43,7 +40,7 @@ function inserirLista(event) {
             <p class="dados">Sua foto:</p>
             <img class="foto-pessoa" src="${fotoPessoa.value}" alt="" width="50%">
         </div>
-        <p class="dados"> ${termos} </p>
+        <p class="dados"> ${termos.checked} </p>
     `;
 
     document.querySelector(".retorno").appendChild(elemento);
