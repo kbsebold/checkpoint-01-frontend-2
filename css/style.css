@@ -41,22 +41,23 @@ main {
 section {
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    gap: 7rem;
     flex-wrap: wrap;
 }
 
 .form, .resultado {
     background-color: rgba(59, 21, 21, 0.63);
-    margin-top: 6rem;
+    margin-top: 10rem;
     padding: 2rem;
     border-radius: 1rem 0;
     color: white;
-    width: 25rem;
+    width: 34.326875rem;
     margin-bottom: clamp(50px, 25vw, 100px);
 }
 
 section h2 {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 form {
@@ -69,8 +70,8 @@ form {
     line-height: 2rem;    
 }
 
- label,#termos {
-    font-size: 0.8rem;
+ label {
+    font-size: 1.2rem;
 } 
 
 /* ---------- INPUTS ---------- */
@@ -127,11 +128,22 @@ input:focus {
 
 .foto-pessoa {
     border-radius: 2rem;
+    width: 80%;
 }
 
+.centro {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.nome {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    color:BLACK;
+    font-size: 1.5rem;
+}
 .dados {
     line-height: 2rem;
-    text-align: center;
     font-size: 1.2rem;
     color: black;
 }
@@ -148,7 +160,9 @@ input:focus {
     margin-bottom: 1rem;
 }
 
-
+#termo {
+    font-style: italic;
+}
 
 /* ---------- FOOTER ---------- */
 
@@ -168,14 +182,100 @@ footer a {
 }
 
 
-@media (max-width:375px) {
-   .form, .resultado {
-      width: 85vw;
-  }
-  
-  input[type='text'], input[type='number'] {
-    height: 2rem;
-    width: 75vw;
-  } 
+@media (min-width:280px) and (max-width:653px) {
+    header h1 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
 
+    section h2 {
+        font-size: 1rem;
+    }
+
+    label, #termos, .dados {
+        font-size: 0.7rem;
+    }
+   
+    .form, .resultado{
+        width: 85vw;
+        margin: 3rem;
+    }
+
+    .resultado {
+        margin-top: -7rem;
+    }
+
+    input[type="text"],input[type="number"]{
+        width: 12rem;
+    }
+
+    .nome {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (min-width:320px) and (max-width:568px) {
+    header h1 {
+        font-size: 1.5rem;
+        margin-top: 0.4rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    label, #termos, .dados {
+        font-size: 0.8rem;
+    }
+
+    .form, .resultado{
+        width: 85vw;
+        margin: 3rem;
+    }
+
+    .resultado {
+        margin-top: -7rem;
+    }
+
+
+    input[type="text"],input[type="number"]{
+        width: 14rem;
+    }
+    
+    footer {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width:360px) and (max-width:800px) {
+    .form, .resultado{
+        width: 85vw;
+        margin: 3rem;
+    }
+
+    .resultado {
+        margin-top: -7rem;
+    }
+
+    input[type="text"],input[type="number"]{
+        width: 18rem;
+    }
+
+}
+
+@media (min-width:1024px) and (max-width:1366px) {
+    .form, .resultado{
+        width: 85vw;
+        margin: 3rem;
+    }
+
+    .resultado {
+        margin-top: -7rem;
+    }
+
+    input[type="text"],input[type="number"]{
+        width: 38rem;
+    }
 }

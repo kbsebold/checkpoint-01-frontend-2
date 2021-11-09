@@ -30,22 +30,22 @@ function inserirLista(event) {
 
     termos.checked ? termosTxt = "Parabéns, vc está pronto(a) para adotar um pet! :)" : termosTxt = "Sugerimos que pesquise mais antes de adotar um pet :(";
    
-
     let elemento = document.createElement("div");
     elemento.setAttribute('class','fundo');
     elemento.innerHTML = `
-        <p class="dados">Nome completo:<b> ${nomeCompleto.value}</b></p>
-        <p class="dados">Quantidade de pets:<b> ${quantidade.value}</b></p>
-        <p class="dados">Tipo de Animal: <b>${tipo.value}</b></p>
-        <p class="dados">Gênero do animal:<b>${genero.value}</b></p>
         <div class="imagem">
-            <p class="dados">Sua foto:</p>
-            <img class="foto-pessoa" src="${fotoPessoa.value}" alt="" width="50%">
+            <img class="foto-pessoa" src="${fotoPessoa.value}" alt="">
         </div>
-        <p class="dados"> ${termosTxt} </p>
+        <p class="nome"><b> ${nomeCompleto.value}</b></p>
+        <p class="dados"><i>Deseja adotar:</i> <b> ${quantidade.value}</b> pet(s)</p>
+        <p class="dados"><i> Tipo de Animal: </i> <b>${tipo.value}</b></p>
+        <p class="dados"> <i> Gênero do animal: </i> <b>${genero.value}</b></p>
+        <p class="dados centro" id="termo"> ${termosTxt} </p>
     `;
 
     document.querySelector(".retorno").appendChild(elemento);
 
 
 }
+
+
