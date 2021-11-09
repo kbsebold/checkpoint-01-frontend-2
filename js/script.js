@@ -30,12 +30,12 @@ function inserirLista(event) {
 
            
     let elemento = document.createElement("div");
-    elemento.setAttribute('class','fundo')
+    elemento.setAttribute('class','fundo');
     elemento.innerHTML = `
-        <p class="dados">Nome completo: ${nomeCompleto.value}</p>
-        <p class="dados">Quantidade de pets: ${quantidade.value}</p>
-        <p class="dados">Tipo de Animal: ${tipo.value}</p>
-        <p class="dados">Gênero do animal:${genero.value}</p>
+        <p class="dados">Nome completo:<b> ${nomeCompleto.value}</b></p>
+        <p class="dados">Quantidade de pets:<b> ${quantidade.value}</b></p>
+        <p class="dados">Tipo de Animal: <b>${tipo.value}</b></p>
+        <p class="dados">Gênero do animal:<b>${genero.value}</b></p>
         <div class="imagem">
             <p class="dados">Sua foto:</p>
             <img class="foto-pessoa" src="${fotoPessoa.value}" alt="" width="50%">
