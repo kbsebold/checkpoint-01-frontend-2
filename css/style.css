@@ -52,6 +52,8 @@ section {
     border-radius: 1rem 0;
     color: white;
     width: 34.326875rem;
+    margin-bottom: clamp(100px, 25vw, 200px);
+
 }
 
 section h2 {

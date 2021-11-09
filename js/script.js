@@ -25,10 +25,12 @@ function inserirLista(event) {
     let genero = generos.find((genero) => genero.checked);
 
     let fotoPessoa = document.querySelector('#person');
-
+      
     let termos = document.getElementById('responsabilidade');
 
-           
+    termos.checked ? termosTxt = "Parabéns, vc está pronto(a) para adotar um pet! :)" : termosTxt = "Sugerimos que pesquise mais antes de adotar um pet :(";
+   
+
     let elemento = document.createElement("div");
     elemento.setAttribute('class','fundo');
     elemento.innerHTML = `
@@ -40,10 +42,10 @@ function inserirLista(event) {
             <p class="dados">Sua foto:</p>
             <img class="foto-pessoa" src="${fotoPessoa.value}" alt="" width="50%">
         </div>
-        <p class="dados"> ${termos.checked} </p>
+        <p class="dados"> ${termosTxt} </p>
     `;
 
     document.querySelector(".retorno").appendChild(elemento);
-    }
 
 
+}
