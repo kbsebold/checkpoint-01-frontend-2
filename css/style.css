@@ -51,9 +51,8 @@ section {
     padding: 2rem;
     border-radius: 1rem 0;
     color: white;
-    width: 34.326875rem;
+    width: 25rem;
     margin-bottom: clamp(50px, 25vw, 100px);
-
 }
 
 section h2 {
@@ -70,8 +69,8 @@ form {
     line-height: 2rem;    
 }
 
- label {
-    font-size: 1rem;
+ label,#termos {
+    font-size: 0.8rem;
 } 
 
 /* ---------- INPUTS ---------- */
@@ -170,5 +169,13 @@ footer a {
 
 
 @media (max-width:375px) {
-    
+   .form, .resultado {
+      width: 85vw;
+  }
+  
+  input[type='text'], input[type='number'] {
+    height: 2rem;
+    width: 75vw;
+  } 
+
 }
